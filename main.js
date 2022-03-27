@@ -1,34 +1,3 @@
-/* Тестовое на Junior JavaScript разработчика
-
-Необходимо разработать простое погодное приложение,
-которое будет состоять только из клиентской части
-JavaScript(та, что запускается в браузере)
-Для выполнения задания можно использовать React,
-Vue, Angular или любой другой фреймворк/UI библиотеку.
-
-Пользователь вводит название города в поле для
-поиска и нажимает кнопку "Get Weather"
-Приложение должно отправить запрос на OpenWeatherMap
-API: https://openweathermap.org/current и получить JSON данные,
-которые необходимо будет распарсить(преобразовать
-в JavaScript объект) и вывести пользователю температуру воздуха,
-влажность и состояние погоды(clear, rain и т.д)
-в интерфейсе ниже строки поиска(в который он вводил город).
-
-Дополнительное задание(не обязательно, по желанию):
-Добавить возможность сохранение текущего города в "Избранное",
-путём сохранение его в localStorage,
-При открытии приложения заново,
-пользователь должен увидеть уже сохраненные города и
-приложение должно получить погоду для них
-автоматически(без нажатия на кнопку Get Weather)
-Current weather data
-https://openweathermap.org
-
-Срок выполнение задания 24 часа:)
-ну в его случае пусть до вторника делает
-* */
-
 const API_KEY = '86f1b43a2e0d3287087f3ac22b5d744b';
 const KEY = 'Citys';
 const cityOutput = document.getElementById('city_output');
@@ -105,11 +74,7 @@ const localCity = () =>{
     let requests = cityLocalName.map(city => fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=${API_KEY}&units=metric`));
 
     Promise.all(requests)
-
-        // преобразовать массив ответов response в response.json(),
-        // чтобы прочитать содержимое каждого
         .then(responses => Promise.all(responses.map(r => r.json())))
-        // все JSON-ответы обработаны, citys - массив с результатами
         .then(citys => citys.forEach(city => {
             if (cityOutput) {
                 cityShow.push({
