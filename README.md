@@ -1,5 +1,5 @@
 ## Weather in city
-Preview [Link](https://kirill8210.github.io/search_vacancy/)
+Preview [Link](https://kirill8210.github.io/weather_js/)
 ### Task description:
 Погодное приложение на JavaScript.
  
