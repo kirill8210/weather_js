@@ -9,6 +9,7 @@ html{
 }
 
 body{
+    min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     background:  url('./img/weather.jpg') no-repeat;
     background-size: cover;
@@ -25,7 +26,8 @@ body{
     color: #fff;
     width: 250px;
     text-align: center;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 20px 0;
     text-transform: uppercase;
 }
 
