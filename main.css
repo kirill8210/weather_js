@@ -1,0 +1,138 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background:  url('./img/weather.jpg') no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.weather{
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.weather h2{
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+
+#city_form{
+    font-size: 0;
+    margin-bottom: 25px;
+}
+
+#city_input{
+    outline: none;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    background: #fff;
+    color: #212121;
+    cursor: pointer;
+}
+
+#city_btn{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 150px;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    background: #edbe11;
+    color: #212121;
+    cursor: pointer;
+    transition: color .25s ease-in-out;
+}
+
+#city_btn:hover{
+    color: #fff;
+}
+
+#city_output{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 15px 0;
+    gap: 20px 30px;
+}
+
+#city_error{
+    color: crimson;
+    margin: 15px 0;
+}
+
+.card{
+    background-color: white;
+    background-image: url('./img/close.svg');
+    background-size: 30px;
+    background-position: 265px 5px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    width: 300px;
+    border: 1px solid #212121;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card_title, .name{
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    margin-right: 35px;
+}
+
+.card div{
+    cursor: auto;
+    padding: 10px;
+}
+
+@media (max-width: 690px) {
+    .weather{
+        padding: 0 10px;
+    }
+
+    #city_form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #city_input {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    #city_btn {
+        width: 300px;
+        margin: 10px auto 0;
+    }
+
+    #city_output {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 15px auto;
+        gap: 20px 30px;
+    }
+}
+
+
+
